@@ -16,3 +16,5 @@ java -version
 * Run using **java**
 
 
+* .NET languages -> C#, VB.NET, F#
+* JVM languages -> Java, Kotlin, Groovy, Scala
