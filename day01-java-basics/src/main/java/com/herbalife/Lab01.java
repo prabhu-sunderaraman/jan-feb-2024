@@ -16,14 +16,15 @@ public class Lab01 {
         boolean gameOver = false;
         int guess = -1;
 
-        while (!gameOver) {
+        //Is game over? No. Then enter the loop;
+        while (!gameOver) { //As long as game is not Over, enter the loop
             guess = scanner.nextInt();
             attempts++;
             if (guess > target) {
                 message = AIM_LOWER;
             } else if (guess < target) {
                 message = AIM_HIGHER;
-            } else {
+            } else if (guess == target) {
                 gameOver = true;
                 //message = "You've got it in " + attempts + " attempts"; //OLD STYLE
                 message = "You've got it in %s attempts".formatted(attempts);
