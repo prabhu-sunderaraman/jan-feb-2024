@@ -30,4 +30,5 @@ String input = "";
 * Start a loop for count 5
 * On each iteration accept a word as input from the user using **Scanner**
 * Append the word to the input
+* Do not allow input of a word that already exists; ie., don't allow duplication
 * Finally print all the words in upper case 
