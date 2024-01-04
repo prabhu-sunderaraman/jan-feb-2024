@@ -18,3 +18,14 @@ java -version
 
 * .NET languages -> C#, VB.NET, F#
 * JVM languages -> Java, Kotlin, Groovy, Scala
+
+
+### Day 01
+
+* Data types; Primitive and Reference types
+* Primitive types are stored on the stack
+* Reference types are stored on the heap; They have a reference from variables on the stack
+* int, boolean, char, double; Integer, Boolean, Character, Double
+* JVM is responsible for memory management; It allocates memory and also cleans up the memory
+* if-else, switch-case statements/expression
+* for, for in, while, do-while 
