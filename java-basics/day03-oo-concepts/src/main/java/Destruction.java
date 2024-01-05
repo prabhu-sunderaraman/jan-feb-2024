@@ -11,4 +11,9 @@ public class Destruction {
 
 class Sample {
     //Java doesn't have a destructor equal to the one in C#
+
+    //Deprecated
+    protected void finalize() throws Throwable {
+        super.finalize();
+    }
 }
