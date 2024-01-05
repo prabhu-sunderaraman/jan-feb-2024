@@ -29,3 +29,37 @@ java -version
 * JVM is responsible for memory management; It allocates memory and also cleans up the memory
 * if-else, switch-case statements/expression
 * for, for in, while, do-while 
+
+
+### Day 02
+
+* String is a reference type
+* It's immutable. 
+* String literals are stored in a separate place on the heap called string pools
+* You can create a string using new keyword or without using new keyword
+* An implicit object is created when you create without using new keyword
+* Everytime you change the value of a string, a new string is created, since it's immutable
+* **Two points** to remember while working with string
+* Stick to one way of creating a string preferrably without new keyword
+* Compare strings using **.equals** method or **.equalsIgnoreCase** method
+* If you want to perform a lot of operations on a string use **StringBuilder** instead
+* Multi-line strings """ """
+* Arrays; 2D; square brackets [] can be placed after the datatype or after the variable name
+
+```
+String[] cities = {};
+String cities[] = {};
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
