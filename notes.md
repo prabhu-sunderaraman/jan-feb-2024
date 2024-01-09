@@ -52,7 +52,14 @@ String cities[] = {};
 ```
 
 
+### Day 03
 
+* Creating classes and objects
+* Constructors called during object creation
+* There are no destructors in Java. Even the **finalize** method that acts as a destructor is deprecated
+* Create a class with private member variables and public getter/setter methods or properties
+* In Java a class with private members and public getters/setters and a no-argument constructor is called a **Java Bean**
+* Pass by value and pass by ref
 
 
 
