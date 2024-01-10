@@ -74,8 +74,17 @@ String cities[] = {};
 * interfaces can be used to list all the constants; since the variables defined in an interface are implicitly public, static and final
 
 
+### Packaging in Java
 
+* Java applications are bundled into **.jar** files or **.jmod** files
+* jar stands for java archive; jar file is very similar to WinZip file.
 
+* Application is organized into **modules**; Each module contains several packages; Each package contains several classes
+* Application is organized into **jars**; Each jar contains several packages; Each package contains several classes
+
+```
+java -jar <jarFileName>
+```
 
 
 

@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.herbalife'
-version = '1.0-SNAPSHOT'
+version = '1.0.0'
 
 repositories {
     mavenCentral()
@@ -16,4 +16,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+jar {
+    manifest {
+        attributes('Main-Class': 'InterfacesExample')
+    }
 }
