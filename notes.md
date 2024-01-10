@@ -62,6 +62,20 @@ String cities[] = {};
 * Pass by value and pass by ref
 
 
+### Day 04
+
+* Inheritance denotes "is-a" relationship
+* **extends** keyword is used in class-based inheritance
+* method overriding where the base class method needs to be redefined with the same signature in the derived class
+* **super** keyword
+* Whenever a derived class object is created, the base class object is instantiated first, followed by the derived class
+* **abstract** used to define abstract classes; can have abstract methods
+* records, enums
+* interfaces can be used to list all the constants; since the variables defined in an interface are implicitly public, static and final
+
+
+
+
 
 
 
