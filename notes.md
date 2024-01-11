@@ -73,8 +73,15 @@ String cities[] = {};
 * records, enums
 * interfaces can be used to list all the constants; since the variables defined in an interface are implicitly public, static and final
 
+### Day 05
 
-### Packaging in Java
+* interfaces
+* constants, abstract methods, default methods, static methods
+* core jdk is organized into modules
+* **java.base** module contains the core APIs
+
+
+##### Packaging in Java
 
 * Java applications are bundled into **.jar** files or **.jmod** files
 * jar stands for java archive; jar file is very similar to WinZip file.
