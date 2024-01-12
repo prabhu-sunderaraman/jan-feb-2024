@@ -79,7 +79,7 @@ String cities[] = {};
 * constants, abstract methods, default methods, static methods
 * core jdk is organized into modules
 * **java.base** module contains the core APIs
-
+* java.lang, java.util, java.net, java.nio
 
 ##### Packaging in Java
 
