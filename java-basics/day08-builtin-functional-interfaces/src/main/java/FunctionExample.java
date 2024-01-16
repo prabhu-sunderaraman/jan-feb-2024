@@ -3,7 +3,9 @@ import java.util.function.Function;
 
 public class FunctionExample {
     public static void main(String[] args) {
+
         //Function is a FI that takes data of ANY type and returns data of ANY type
+        //User in map-reduce operations while processing a collection
 
         //increment a number
         Function<Integer, Integer> incrementor = num -> num + 1;

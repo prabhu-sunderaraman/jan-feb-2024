@@ -9,14 +9,16 @@ public class Lab07 {
         boolean usernameValid = isNotNull
                 .and(isNotBlank)
                 .and(isNotEmpty)
-                .and(isUsernameLengthValid)
+                //.and(isUsernameLengthValid)
+                .and(lengthValidation.apply(6, 12))
                 .test(username);
         System.out.println("Username: %s validity %s".formatted(username, usernameValid));
 
         boolean passwordValid = isNotNull
                 .and(isNotBlank)
                 .and(isNotEmpty)
-                .and(isPasswordLengthValid)
+                //.and(isPasswordLengthValid)
+                .and(lengthValidation.apply(8, 14))
                 .and(hasNumber)
                 .and(hasUpperCase)
                 .test(password);
