@@ -24,7 +24,7 @@ public class FunctionExample {
                 .andThen(doubleIt)
                 .apply(number);
         System.out.println(result);
-        
+
         BiFunction<Integer, Integer, Integer> adder = (a, b) -> a + b;
         result = adder.apply(10, 23);
     }
