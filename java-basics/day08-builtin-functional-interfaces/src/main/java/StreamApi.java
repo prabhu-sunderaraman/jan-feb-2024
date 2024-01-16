@@ -45,5 +45,21 @@ public class StreamApi {
 
         newList.forEach(System.out::println);
 
+        System.out.println("************************************");
+        //Streams are lazily evaluated
+        languages
+                .stream()
+                .filter(lang -> lang.endsWith("t")) //NOT EVALUATED AT ALL
+                //.forEach(System.out::println); //terminal operation
+                .collect(Collectors.toList()); //terminal operation
+
+        //LAZILY EVALUATED
+        Stream<String> processingStream = languages
+                .stream()
+                .filter(e -> e.startsWith("J"))
+                .map(e -> e.toUpperCase());
+
+        processingStream.forEach(System.out::println);
+
     }
 }
