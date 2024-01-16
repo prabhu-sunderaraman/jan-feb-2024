@@ -93,7 +93,13 @@ String cities[] = {};
 java -jar <jarFileName>
 ```
 
+### Day 07
 
+*  java.util.function package has a list of built-in functional interfaces
+* Predicate, Function, Supplier, Consumer
+* **Predicate** is a FI that accepts data of any type and returns boolean
+* isEven, greaterThan etc.
+* and, or, negate default methods that help you to chain methods
 
 
 
