@@ -102,6 +102,29 @@ java -jar <jarFileName>
 * and, or, negate default methods that help you to chain methods
 
 
+### Day 08
+
+* Stream API
+* java.util.stream.Stream
+* Stream is used to sequentially process collections in a functional style
+* Streams can be created by using **.stream()**
+* Streams are lazily evaluated and cannot be reused
+* filter, map, collect, forEach
+* filter takes a Predicate as argument; map takes a Function as argument; collect takes a Supplier as argument; foreach takes a Consumer as argument
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
