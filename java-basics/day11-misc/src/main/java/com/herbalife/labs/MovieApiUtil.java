@@ -14,6 +14,7 @@ public class MovieApiUtil {
     public String fetchMovieDetails(String movieName) throws IOException, InterruptedException {
         movieName = URLEncoder.encode(movieName);
         String url = OMDB_API_BASE_URL.formatted(movieName);
+        System.out.println(url);
         HttpRequest request = HttpRequest
                 .newBuilder()
                 .uri(java.net.URI.create(url))
