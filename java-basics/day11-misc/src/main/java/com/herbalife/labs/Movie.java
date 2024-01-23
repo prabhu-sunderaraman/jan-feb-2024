@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record Movie(@JsonProperty("Title") String title,
-                    @JsonProperty("Year") int year,
-                    @JsonProperty("Genre") String genre) {
+                    @JsonProperty("Year") String year,
+                    @JsonProperty("Genre") String genre,
+                    @JsonProperty("Response") String response,
+                    @JsonProperty("Error") String error) {
 }

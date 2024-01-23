@@ -16,7 +16,7 @@ public class MovieDbUtil {
             String sql = "INSERT INTO movies (title, year, genre) VALUES (?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, movie.title());
-            statement.setInt(2, movie.year());
+            //statement.setInt(2, movie.year());
             statement.setString(3, movie.genre());
             statement.executeUpdate();
             statement.close();

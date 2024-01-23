@@ -114,6 +114,20 @@ java -jar <jarFileName>
 
 
 
+### Day 11
+
+* **java.util.concurrent** package contains classes to work with threads
+* Thread object by passing a Runnable interface 
+* Runnable is a functional interface.
+* Calling **start()** on the thread object creates a thread(OS thread)
+* Thread pools.
+* ExecutorService to create different thread pools 
+* fixed thread pool, cached thread pool, forkjoinpool
+* You submit a task to the thread pool
+* Parallel streams can be created using .parallel() or .parallelStream() method
+* By default it creates a **forkjoinpool** with **(number of cores - 1)** threads
+* You can customize the pool based on CPU/IO intensive and create a custom forkjoin pool
+
 
 
 
