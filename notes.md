@@ -128,6 +128,52 @@ java -jar <jarFileName>
 * By default it creates a **forkjoinpool** with **(number of cores - 1)** threads
 * You can customize the pool based on CPU/IO intensive and create a custom forkjoin pool
 
+### Enterprise application development in Java
+
+* Java SE present in JDK
+* Java EE (JEE) contains specs for persistence, web services, Restful services, Transactions, Security, Messaging (Kafka, RabbitMQ)
+* As a developer you need the implementation libraries 
+* Say you want to develop RESTful API
+* RESTful API is available as a spec in JEE stack
+* But what you need is an implementation library/framework
+* You need a mall(or frameworks) that provides you access to all JEE implementations
+* Spring boot, Quarkus, Micronaut, Oracle RI
+* **Quarkus** is a framework designed to build enterprise applications in Java
+
+### Quarkus
+
+* Quarkus is cloud-native framework
+* Quarkus gives you one feature that makes the application more performant than Spring boot
+* Quarkus applications can be packaged into native executables(like exe file) instead of jars
+* Quarkus is based on Microprofile standard (https://microprofile.io/)
+* Using Quarkus you can develop REST apis, command line applications, scheduled jobs, SOAP-based Web services, messaging applications ...etc
+* **Dependency Injection** is the fundamental principle of working with Quarkus
+* DI is a simple mechanism by which you avoid writing code for creating objects, looking up for objects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
