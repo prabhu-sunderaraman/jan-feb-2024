@@ -149,6 +149,29 @@ java -jar <jarFileName>
 * Using Quarkus you can develop REST apis, command line applications, scheduled jobs, SOAP-based Web services, messaging applications ...etc
 * **Dependency Injection** is the fundamental principle of working with Quarkus
 * DI is a simple mechanism by which you avoid writing code for creating objects, looking up for objects
+* Quarkus is a **POJO** framework
+
+
+### Dependency Injection
+
+* **quarkus-arc** is the dependency that you need in every quarkus application for DI
+* You define a class or bean and mark the scope as **@Singleton** or **@ApplicationScoped** or @RequestScoped
+* You can **@Inject** annotation
+* @ConfigProperty, @Named
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
