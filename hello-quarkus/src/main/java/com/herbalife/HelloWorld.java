@@ -1,5 +1,6 @@
 package com.herbalife;
 
+import com.herbalife.labs.lab01.Conference;
 import io.quarkus.runtime.QuarkusApplication;
 import io.quarkus.runtime.annotations.QuarkusMain;
 import jakarta.inject.Inject;
@@ -28,11 +29,19 @@ public class HelloWorld implements QuarkusApplication {
     @Inject
     Book book;
 
+    @Inject
+    Conference conference;
+
     @Override
     public int run(String... args) throws Exception {
 
-        System.out.println(book.getTitle());
-        System.out.println(book.getAuthor());
+        System.out.println(conference.getTopics(60));
+        System.out.println(conference.getTopics(45));
+        System.out.println(conference.getTopics(90));
+
+
+//        System.out.println(book.getTitle());
+//        System.out.println(book.getAuthor());
 
 //        System.out.println(dbConstants.host());
 //        System.out.println(dbConstants.port());

@@ -1,6 +1,8 @@
 package com.herbalife;
 
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
+import jakarta.inject.Inject;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 @ApplicationScoped
@@ -8,8 +10,9 @@ public class Book {
     String title;
     String author;
 
-//    public Book(@ConfigProperty(defaultValue = "ABC") String title,
-//                @ConfigProperty(defaultValue = "Joe") String author) {
+
+    //NOT SUPPORTED
+//    public Book(String title, String author) {
 //        this.title = title;
 //        this.author = author;
 //    }
