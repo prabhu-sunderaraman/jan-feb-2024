@@ -159,6 +159,12 @@ java -jar <jarFileName>
 * You can **@Inject** annotation
 * @ConfigProperty, @Named
 
+### REST API
+
+* RESTEasy Reactive Jackson dependency
+* Netty server internally 
+* Define Resources (similar to Controllers)
+* @Path, @GET, @POST, @QueryParam, @PathParam, @FormParam
 
 
 
