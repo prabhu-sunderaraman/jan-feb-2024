@@ -10,21 +10,18 @@ import java.util.List;
 @Path("/sample2")
 public class Sample2Resource {
 
-    //@Inject
-    AppConfiguration appConfiguration;
-
     @ConfigProperty(name = "topics")
     List<String> topics;
 
 
-    //@Inject
+    @Inject
     List<String> cities;
 
-//    @GET
-//    @Path("/cities")
-//    public List<String> cities() {
-//        return cities;
-//    }
+    @GET
+    @Path("/cities")
+    public List<String> cities() {
+        return cities;
+    }
 
     @GET
     @Path("/topics")

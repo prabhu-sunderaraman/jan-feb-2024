@@ -6,11 +6,10 @@ import jakarta.ws.rs.Produces;
 
 import java.util.List;
 
-@ApplicationScoped
 public class AppConfiguration {
 
     @Produces
-    @DefaultBean
+    @ApplicationScoped
     public List<String> cities() {
         List<String> citiesInMexico = List.of("Mexico City", "Guadalajara", "Monterrey");
         return citiesInMexico;
