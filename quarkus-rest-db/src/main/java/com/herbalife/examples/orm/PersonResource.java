@@ -10,6 +10,12 @@ public class PersonResource {
     @Inject
     PersonService personService;
 
+    @DELETE
+    @Path("/id/{id}") // http://localhost:8080/persons/id/1
+    public void deletePerson(@PathParam("id") int id) {
+        personService.deletePerson(id);
+    }
+
     @PUT
     @Path("/id/{id}/age/{age}") // http://localhost:8080/persons/id/1/age/30
     public void updateAge(@PathParam("id") int id, @PathParam("age") int age) {

@@ -25,10 +25,20 @@ public class PersonService {
     @Transactional
     public void updateAge(int id, int age) {
         Optional<Person> optionalPerson = personRepository.findByIdOptional(id);
-        if (optionalPerson.isPresent()) {
-            Person person = optionalPerson.get();
+        optionalPerson.ifPresent(person -> {
             person.setAge(age);
             personRepository.persist(person);
-        }
+        });
+//        if (optionalPerson.isPresent()) {
+//            Person person = optionalPerson.get();
+//            person.setAge(age);
+//            personRepository.persist(person);
+//        }
+    }
+
+    @Transactional
+    public void deletePerson(int id) {
+        Optional<Person> optionalPerson = personRepository.findByIdOptional(id);
+        optionalPerson.ifPresent(personRepository::delete);
     }
 }
