@@ -37,6 +37,15 @@ docker run --name jan-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql
 docker run --name mysql-client -p8001:80 -d --link jan-mysql:db phpmyadmin
 ```
 
+### Build an image
 
+```
+docker build -t word-api:1.0.0 .
+```
 
+### Run the image
+
+```
+docker run -d --name=word -p8080:8080 word-api:1.0.0
+```
 
