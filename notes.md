@@ -167,6 +167,19 @@ java -jar <jarFileName>
 * @Path, @GET, @POST, @QueryParam, @PathParam, @FormParam
 
 
+### DB with Quarkus
+
+* You can jdbc or ORM
+* Inject a datasource and get the connection in case of JDBC
+* JPA is the uniform API to work with ORM
+* Multiple implementations of ORM available; Toplink, MyBatis, Hibernate
+* To work with ORM in Quarkus select **hibernate panache** library
+* Define an Entity class and map it with the table
+* Map the variables with the columns
+* @Entity, @Table, @Column, @Id, @GeneratedValue
+* You can use Repository or ActiveRecord pattern to implement the repository/DAO classes
+* Define a Repository by implementing **PanacheRepositoryBase**
+* CUD operations, the method should execute in a transaction context; **@Transactional**
 
 
 
