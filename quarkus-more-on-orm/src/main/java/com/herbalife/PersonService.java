@@ -9,6 +9,18 @@ import java.util.List;
 @ApplicationScoped
 public class PersonService {
 
+    public List<Person> getAllPersonsWithDogsGt(int dogCount) {
+        String query = "from Person p join fetch p.dogs d where size(p.dogs) > ?1";
+        List<Person> persons = Person.find(query, dogCount).list();
+        return persons;
+    }
+
+    public List<Car> getCarsOwnedByPersonsWithAgeLt(int age) {
+        String query = "from Car c join fetch c.owner p where p.age < ?1";
+        List<Car> cars = Car.find(query, age).list();
+        return cars;
+    }
+
     @Transactional
     public void createPerson(PersonDto personDto) {
 
