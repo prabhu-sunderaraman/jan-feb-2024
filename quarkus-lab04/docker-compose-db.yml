@@ -1,0 +1,19 @@
+services:
+  # Need to refer to phpmyadmin documentation to understand how to link it to the mysql container
+  mysql-client:
+    image: phpmyadmin
+    container_name: docker-compose-lab01-phpmyadmin
+    ports:
+      - "8082:80"
+    links:
+      - docker-compose-lab01-mysql:db
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:latest
+    container_name: docker-compose-lab01-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
