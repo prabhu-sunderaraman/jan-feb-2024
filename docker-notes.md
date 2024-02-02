@@ -49,3 +49,19 @@ docker build -t word-api:1.0.0 .
 docker run -d --name=word -p8080:8080 word-api:1.0.0
 ```
 
+### docker compose
+
+```
+docker compose -p friday-in-india -f docker-compose.yml up -d
+```			
+
+```
+docker compose -p friday-in-india -f docker-compose.yml down -d
+```
+
+
+
+
+
+
+
