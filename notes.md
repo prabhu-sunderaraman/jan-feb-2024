@@ -182,9 +182,21 @@ java -jar <jarFileName>
 * CUD operations, the method should execute in a transaction context; **@Transactional**
 
 
+### Kafka
 
-
-
+* Broadcasting messages
+* A single message can be consumed by many consumers
+* Producers and Consumers
+* Message contains data + timestamp
+* Messages in Kafka are commonly referred to as **Events**
+* Kafka's equivalent in Azure environment is **EventHub**
+* One of the reasons Kafka is used; Stream millions of events per second 
+* Topic is the main entity in Kafka. It's a storage box that contains n messages
+* Each producer produces messages to a Topic
+* Consumers consume messages from a Topic
+* Topic can be treated as a Newspaper vendor
+* Kafka was developed by LinkedIn team
+* Apache Kafka(Open source) and Confluent Kafka(Kafka on the cloud)
 
 
 
