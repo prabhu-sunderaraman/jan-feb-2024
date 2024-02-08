@@ -197,6 +197,17 @@ java -jar <jarFileName>
 * Topic can be treated as a Newspaper vendor
 * Kafka was developed by LinkedIn team
 * Apache Kafka(Open source) and Confluent Kafka(Kafka on the cloud)
+* You need a kafka server(bootstrap server) and kafka client
+
+#### Kafka consumers
+
+* Consumer polls records every n seconds
+* Each consumer needs to be part of a consumer group
+* Consumer group id is treated as an unique consumer by kafka
+* Kafka maintains a list of consumer groups along with their offset
+* Based on the offset position for every consumer, Kafka sends the records to the consumers
+* After processing each record, consumer sends an acknowledgement to kafka and kafka updates the offset for that consumer group
+ 
 
 
 
@@ -209,9 +220,7 @@ java -jar <jarFileName>
 
 
 
-
-
-
+.
 
 
 
