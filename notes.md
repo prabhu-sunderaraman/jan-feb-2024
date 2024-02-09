@@ -222,6 +222,18 @@ java -jar <jarFileName>
 * **Moral of the story**: When you work with Kafka you need to work closely with the devops team and specify the number of instances and number of partitions required otherwise you will land up wasting resources (and cost)
 
 
+### CDC
+
+* **Transactional Outbox pattern** https://microservices.io/patterns/data/transactional-outbox.html
+* Change Data Capture
+* Whenever a change occurs in a DB, how to insert a message to Kafka
+* Apache Beam, Debezium **(Code based)**
+* CDC, Azure Functions, which writes to Event Hub
+* Azure Data Factory(still a preview feature)
+
+
+
+
 
 
 
