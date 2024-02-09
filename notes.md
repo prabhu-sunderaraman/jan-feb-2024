@@ -207,8 +207,15 @@ java -jar <jarFileName>
 * Kafka maintains a list of consumer groups along with their offset
 * Based on the offset position for every consumer, Kafka sends the records to the consumers
 * After processing each record, consumer sends an acknowledgement to kafka and kafka updates the offset for that consumer group
- 
+ * **ConsumerRecord, ConsumerRecords** to access more information about every message
+ * **OutgoingKafkaRecordMetadata** to publish metadata information 
+ * You can configure key/value serializers while publishing messages and key/value deserializers while consuming messages
 
+#### Partitions
+
+* When kafka receives a message with a key
+* It performs a routing algorithm using the key and the total number of partitions
+* It then determines the partition number and forwards this message to that partition
 
 
 
