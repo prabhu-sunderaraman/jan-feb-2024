@@ -216,6 +216,18 @@ java -jar <jarFileName>
 * When kafka receives a message with a key
 * It performs a routing algorithm using the key and the total number of partitions
 * It then determines the partition number and forwards this message to that partition
+* You can have consumer instances <= to the number of partitions in a topic
+* Each consumer instance is assigned to one or more partitions
+* Whenever a consumer goes up/down rebalancing occurs and the assignment changes
+* **Moral of the story**: When you work with Kafka you need to work closely with the devops team and specify the number of instances and number of partitions required otherwise you will land up wasting resources (and cost)
+
+
+
+
+
+
+
+
 
 
 
