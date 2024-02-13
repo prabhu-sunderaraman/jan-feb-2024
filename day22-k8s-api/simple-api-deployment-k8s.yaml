@@ -19,6 +19,11 @@ spec:
           image: simple-api:1.0.0
           ports:
             - containerPort: 8080
+          env:
+            - name: WELCOME
+              value: "Hello from Kubernetes!"
+            - name: BYE
+              value: "Goodbye from Kubernetes!"
 ---
 apiVersion: v1
 kind: Service
