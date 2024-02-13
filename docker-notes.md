@@ -83,6 +83,15 @@ docker compose -p friday-in-india -f docker-compose.yml down -d
 * kubectl config get-contexts
 * kubectl get pods
 
+### Steps to create a pod
+
+* Implement your API
+* Build a jar or native executable
+* Build an image using docker (or podman)
+* **Create a pod using CLI or configuration file**
+
+* kubectl run <pod-name> --image=<image-name>
+* kubectl delete pod/<pod-name>
 
 
 
