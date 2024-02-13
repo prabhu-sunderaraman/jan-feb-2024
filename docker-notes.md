@@ -59,6 +59,60 @@ docker compose -p friday-in-india -f docker-compose.yml up -d
 docker compose -p friday-in-india -f docker-compose.yml down -d
 ```
 
+### Kubernetes
+
+* k8s is an orchestration engine
+* It's used to manage your containers
+* It makes sure that your application is always up and running
+* Fundamental building block of k8s is **Pod**
+* A **Pod** is a wrapper to your container which is a wrapper to your application
+
+#### Getting started working with k8s
+
+* A Cluster
+* Inside this cluster, is where you create and deploy the **pods**
+* Azure Kubernetes Services (AKS) cluster; equivalent in AWS, GC
+* You need the tools to create and manage pods; **kubectl**
+* Enabling Kubernetes in Docker Desktop, creates a single node cluster called **"docker-desktop"** and installs the command line tool **kubectl**
+
+
+
+### Basic kubectl commands
+
+* kubectl version
+* kubectl config get-contexts
+* kubectl get pods
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
