@@ -5,7 +5,7 @@ metadata:
   labels:
     app: simple-api
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: simple-api
@@ -15,7 +15,20 @@ spec:
         app: simple-api
     spec:
       containers:
-      - name: simple-api
-        image: simple-api:1.0.0
-        ports:
-        - containerPort: 8080
+        - name: simple-api
+          image: simple-api:1.0.0
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-api
+spec:
+  selector:
+    app: simple-api
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30001 # This is the port that will be exposed to the outside world; Nodeport runs on ports 30000-32767
