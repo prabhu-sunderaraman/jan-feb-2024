@@ -1,5 +1,6 @@
 package com.herbalife;
 
+import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
@@ -12,6 +13,16 @@ public class SimpleResource {
 
     @ConfigProperty(name = "bye.message")
     String byeMessage;
+
+    @Inject
+    DatabaseCredentials databaseCredentials;
+
+    @GET
+    @Path("database")
+    public String database() {
+        return "URL: " + databaseCredentials.url() + ", Username: " + databaseCredentials.username() + ", Password: " + databaseCredentials.password();
+    }
+
 
     @GET
     @Path("greetings")

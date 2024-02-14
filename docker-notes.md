@@ -94,6 +94,15 @@ docker compose -p friday-in-india -f docker-compose.yml down -d
 * kubectl delete pod/<pod-name>
 
 
+* Create deployments and configure your pods, replicas, services etc
+* **kubectl apply -f <filename>**
+* **kubectl delete -f <filename>**
+
+### Service	
+
+* If you want to access the application running as a pod, you need a service
+* Different types of services available, NodePort, LoadBalancer, Ingress
+* 
 
 
 

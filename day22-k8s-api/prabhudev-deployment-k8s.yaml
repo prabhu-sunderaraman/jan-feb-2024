@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-api
+  namespace: mexico # This is the namespace where the deployment will be created
+  labels:
+    app: simple-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-api
+  template:
+    metadata:
+      labels:
+        app: simple-api
+    spec:
+      containers:
+        - name: simple-api
+          image: prabhudev/hl-samples-repo:simple-api-1.0.0
+          ports:
+            - containerPort: 8080
+          env:
+            - name: WELCOME
+              value: "Hello from Kubernetes!"
+            - name: BYE
+              value: "Goodbye from Kubernetes!"
+            - name: DATABASE_URL
+              value: "jdbc:postgresql://postgres:5432/prabhudev"
+            - name: DATABASE_USERNAME
+              value: "prabhudev"
+            - name: DATABASE_PASSWORD
+              value: "prabhudev"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-api
+  namespace: mexico # This is the namespace where the service will be created
+spec:
+  selector:
+    app: simple-api
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30001 # This is the port that will be exposed to the outside world; Nodeport runs on ports 30000-32767
