@@ -22,15 +22,30 @@ spec:
             - containerPort: 8080
           env:
             - name: WELCOME
-              value: "Hello from Kubernetes!"
+              valueFrom:
+                configMapKeyRef:
+                  name: simple-api-config
+                  key: WELCOME
             - name: BYE
-              value: "Goodbye from Kubernetes!"
+              valueFrom:
+                configMapKeyRef:
+                  name: simple-api-config
+                  key: BYE
             - name: DATABASE_URL
-              value: "jdbc:postgresql://postgres:5432/prabhudev"
+              valueFrom:
+                configMapKeyRef:
+                  name: simple-api-config
+                  key: DATABASE_URL
             - name: DATABASE_USERNAME
-              value: "prabhudev"
+              valueFrom:
+                secretKeyRef:
+                  name: simple-api-secret
+                  key: DATABASE_USERNAME
             - name: DATABASE_PASSWORD
-              value: "prabhudev"
+              valueFrom:
+                secretKeyRef:
+                  name: simple-api-secret
+                  key: DATABASE_PASSWORD
 ---
 apiVersion: v1
 kind: Service
