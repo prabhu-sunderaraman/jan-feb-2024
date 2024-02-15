@@ -10,8 +10,7 @@ import java.util.List;
 public class MockDB {
     public List<Company> companies = new ArrayList<>();
 
-    @PostConstruct
-    public void init() {
+    public MockDB() {
         Company company1 = new Company();
         company1.setId("101");
         company1.setName("Herbalife");

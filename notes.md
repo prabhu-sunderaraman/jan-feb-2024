@@ -239,7 +239,19 @@ java -jar <jarFileName>
 * You want to club the fetch request in a say portal. Instead of sending multiple individual requests to various Apis, how about we club all the requests and send
 
 
+``` graphql
 
+query {
+  companies {
+    name
+		ceo
+    headCount
+    listed
+    id
+  }
+}
+
+```
 
 
 
