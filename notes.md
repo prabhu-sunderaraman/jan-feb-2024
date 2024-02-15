@@ -244,7 +244,7 @@ java -jar <jarFileName>
 query {
   companies {
     name
-		ceo
+	ceo
     headCount
     listed
     id
