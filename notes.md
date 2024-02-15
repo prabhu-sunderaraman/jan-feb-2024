@@ -299,6 +299,27 @@ query info($listed: Boolean!, $name: String!) {
     funding
   }
 }
+
+query info($listed: Boolean!, $name: String!) {
+  list: listedCompanies(listed: $listed) {
+    ...companyFragment
+    headCount
+    listed @include (if: $listed)
+  }
+  info: companyInfo(name: $name) {
+    id
+    ...companyFragment
+  }
+  startUps: startUps {
+    name
+    founder
+    funding
+  }
+}
+fragment companyFragment on Company {
+  name
+  ceo
+}
 ```
 
 
