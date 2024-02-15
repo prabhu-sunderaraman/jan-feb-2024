@@ -334,6 +334,48 @@ mutation operationsOnCompany($name1: String, $name2: String) {
     name
   }
 }
+
+
+query {
+  titles: libraries {
+    books {
+      title
+    }
+  }
+  authors: libraries {
+    books {
+      author {
+        name
+      }
+    }
+  }
+  cities: libraries {
+    books {
+      author {
+        city {
+          name
+        }
+      }
+    }
+  }
+  
+  all: libraries {
+    name
+    books {
+      title
+      isbn
+      author {
+        id
+        name
+        city {
+          id
+          name
+          country
+        }
+      }
+    }
+  }
+}
 ```
 
 

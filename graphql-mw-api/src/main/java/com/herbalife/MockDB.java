@@ -10,8 +10,62 @@ import java.util.List;
 public class MockDB {
     public List<Company> companies = new ArrayList<>();
     public List<StartUp> startUps = new ArrayList<>();
+    public List<Library> libraries = new ArrayList<>();
+
 
     public MockDB() {
+        Library library1 = new Library();
+        library1.setName("Horror books Library");
+        List<Book> library1BookList = new ArrayList<>();
+
+        Book book1 = new Book();
+        book1.setIsbn("1234");
+        book1.setTitle("The Shining");
+        library1BookList.add(book1);
+        Person author1 = new Person();
+        author1.setId("a1");
+        author1.setName("Stephen King");
+        City city1 = new City();
+        city1.setId("c1");
+        city1.setName("Bangalore");
+        author1.setCity(city1);
+        book1.setAuthor(author1);
+
+        Book book2 = new Book();
+        book2.setIsbn("1235");
+        book2.setTitle("The Exorcist");
+        Person author2 = new Person();
+        author2.setId("a2");
+        author2.setName("William Peter Blatty");
+        City city2 = new City();
+        city2.setId("c2");
+        city2.setName("Mumbai");
+        author2.setCity(city2);
+        library1BookList.add(book2);
+
+        library1.setBooks(library1BookList);
+
+        Library library2 = new Library();
+        library2.setName("Science Fiction books Library");
+        List<Book> library2BookList = new ArrayList<>();
+        Book book3 = new Book();
+        book3.setIsbn("1236");
+        book3.setTitle("Dune");
+        library2BookList.add(book3);
+        Person author3 = new Person();
+        author3.setId("a3");
+        author3.setName("Frank Herbert");
+        City city3 = new City();
+        city3.setId("c3");
+        city3.setName("Chennai");
+        city3.setCountry("India");
+        author3.setCity(city3);
+        book3.setAuthor(author3);
+        library2.setBooks(library2BookList);
+        libraries.add(library1);
+        libraries.add(library2);
+
+
         StartUp startUp1 = new StartUp();
         startUp1.setId("a101");
         startUp1.setName("Skanray Technologies");
@@ -43,7 +97,6 @@ public class MockDB {
         startUp4.setYear(2010);
         startUp4.setFunding("Series F");
         startUps.add(startUp4);
-
 
 
         Company company1 = new Company();
