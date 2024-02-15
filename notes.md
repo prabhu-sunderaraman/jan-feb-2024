@@ -281,6 +281,24 @@ query {
   }
   
 }
+query info($listed: Boolean!, $name: String!) {
+  list: listedCompanies(listed: $listed) {
+    name
+    ceo
+    headCount
+    listed @include (if: $listed)
+  }
+  info: companyInfo(name: $name) {
+    id
+    name
+    ceo
+  }
+  startUps: startUps {
+    name
+    founder
+    funding
+  }
+}
 ```
 
 
