@@ -266,7 +266,21 @@ query {
     ceo
   }
 }
-
+query {
+  allCompanies: companies {
+    name
+		ceo
+    headCount
+    listed
+    id
+  }
+  allStartUps: startUps {
+    name
+    founder
+    funding
+  }
+  
+}
 ```
 
 
