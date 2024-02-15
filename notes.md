@@ -251,6 +251,22 @@ query {
   }
 }
 
+query {
+  all: companies {
+    name
+	ceo
+    headCount
+    listed
+    id
+  }
+  names: companies {
+    name
+  }
+  ceos: companies {
+    ceo
+  }
+}
+
 ```
 
 

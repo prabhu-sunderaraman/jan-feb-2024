@@ -9,8 +9,43 @@ import java.util.List;
 @ApplicationScoped
 public class MockDB {
     public List<Company> companies = new ArrayList<>();
+    public List<StartUp> startUps = new ArrayList<>();
 
     public MockDB() {
+        StartUp startUp1 = new StartUp();
+        startUp1.setId("a101");
+        startUp1.setName("Skanray Technologies");
+        startUp1.setFounder("Vishwaprasad Alva");
+        startUp1.setYear(2007);
+        startUp1.setFunding("Series C");
+        startUps.add(startUp1);
+
+        StartUp startUp2 = new StartUp();
+        startUp2.setId("a201");
+        startUp2.setName("CureFit");
+        startUp2.setFounder("Mukesh Bansal");
+        startUp2.setYear(2016);
+        startUp2.setFunding("Series D");
+        startUps.add(startUp2);
+
+        StartUp startUp3 = new StartUp();
+        startUp3.setId("a301");
+        startUp3.setName("Unacademy");
+        startUp3.setFounder("Gaurav Munjal");
+        startUp3.setYear(2015);
+        startUp3.setFunding("Series E");
+        startUps.add(startUp3);
+
+        StartUp startUp4 = new StartUp();
+        startUp4.setId("a401");
+        startUp4.setName("Zerodha");
+        startUp4.setFounder("Nithin Kamath");
+        startUp4.setYear(2010);
+        startUp4.setFunding("Series F");
+        startUps.add(startUp4);
+
+
+
         Company company1 = new Company();
         company1.setId("101");
         company1.setName("Herbalife");
