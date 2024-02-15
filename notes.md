@@ -320,6 +320,20 @@ fragment companyFragment on Company {
   name
   ceo
 }
+
+mutation operationsOnCompany($name1: String, $name2: String) {
+  company1:removeCompany(name: $name1)
+  company2: removeCompany(name: $name2)
+  addCompany(company: {
+    id: "10001",
+    name: "Google",
+    ceo: "Sundar Pichai",
+    listed: true,
+    headCount: 100000
+  }) {
+    name
+  }
+}
 ```
 
 
