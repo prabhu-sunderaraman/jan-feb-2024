@@ -232,6 +232,35 @@ java -jar <jarFileName>
 * Azure Data Factory(still a preview feature)
 
 
+### GraphQL
+
+* Does not have to do with Graph Databases all the time
+* You want to fetch appropriate data(pick and choose) from Rest APIs. You have different applications like Mobile, Tablet, Browser, Desktop that need the same data but you are not interested in all the items
+* You want to club the fetch request in a say portal. Instead of sending multiple individual requests to various Apis, how about we club all the requests and send
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

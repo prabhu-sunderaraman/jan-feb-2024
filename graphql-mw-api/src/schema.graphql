@@ -1,0 +1,15 @@
+#In Quarkus you don't need to define a schema file
+#You can define your schema in a Java class and Quarkus will generate the schema for you
+
+#type Company {
+#    id: ID!
+#    name: String!
+#    ceo: String!
+#    headCount: Float!
+#    listed: Boolean!
+#}
+#
+#type Query {
+#    companies: [Company]
+#    company(name: String): Company
+#}
