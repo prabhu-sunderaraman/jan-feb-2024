@@ -35,7 +35,7 @@ public class TemperatureService {
         System.out.println("*************Clearing all caches");
     }
 
-    @Scheduled(every = "200s")
+    //@Scheduled(every = "200s")
     public void clearAllCacheEvery200Seconds() {
         //Not recommended in production; Usually we set up TTL in the cache configuration
         //Add your logic to clear all cache or specific cache every 10 seconds
