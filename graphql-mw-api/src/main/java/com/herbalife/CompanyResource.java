@@ -1,5 +1,8 @@
 package com.herbalife;
 
+import io.smallrye.graphql.api.Subscription;
+import io.smallrye.mutiny.Multi;
+import io.smallrye.mutiny.operators.multi.processors.BroadcastProcessor;
 import jakarta.inject.Inject;
 import org.eclipse.microprofile.graphql.GraphQLApi;
 import org.eclipse.microprofile.graphql.Mutation;
@@ -14,6 +17,12 @@ public class CompanyResource {
     @Inject
     private MockDB mockDB;
 
+    private BroadcastProcessor<Company> addCompanyBroadcastProcessor = BroadcastProcessor.create();
+
+    @Subscription("onCompanyAdded")
+    public Multi<Company> onCompanyAdded() {
+        return addCompanyBroadcastProcessor;
+    }
 
     @Mutation("addCompany")
     public Company addCompany(@Name("company") Company company) {
@@ -25,6 +34,7 @@ public class CompanyResource {
             throw new RuntimeException("Company with name " + company.getName() + " already exists");
         }
         mockDB.companies.add(company);
+        addCompanyBroadcastProcessor.onNext(company);
         return company;
     }
 

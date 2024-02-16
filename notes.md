@@ -376,9 +376,21 @@ query {
     }
   }
 }
+subscription {
+  onCompanyAdded {
+    name
+    ceo
+  }
+}
+
 ```
 
-
+* GraphqQL service; smallrye-graphql
+* @GraphqlApi, @Query, @Mutation, @Subscription
+* Queries are executed parallelly
+* Mutations are executed sequentially
+* Schema is automatically generated based on the code in Quarkus, while in most other frameworks you may have to define ***.graphql** files and define the schema and **queries/mutations**
+* You can pass combine queries; reuse snippets using fragments; use @include directives; pass variables into queries
 
 
 
