@@ -18,6 +18,14 @@ public class TemperatureResource {
     }
 
     @GET
+    @Path("/{city}/{country}")
+    public String getTemperatureOf(String city, String country) {
+        double temperature = temperatureService.getTemperatureOf(city, country);
+        return "Temperature in " + city + " in " + country + " is " + temperature + " degree fahrenheit.";
+    }
+
+
+    @GET
     @Path("/{city}")
     public String getTemperature(String city) {
         double temperature = temperatureService.getTemperature(city);

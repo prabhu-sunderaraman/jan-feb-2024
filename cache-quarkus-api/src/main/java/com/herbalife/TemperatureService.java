@@ -9,6 +9,23 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class TemperatureService {
+
+    @CacheResult(cacheName = "temperature-country-cache")
+    public double getTemperatureOf(@CacheKey String city, @CacheKey String country) {
+        //Imagine this method calls a weather API to get the temperature
+        //So there may be some latency in this method
+        //Let's generate a latency of 5 seconds
+        System.out.println("*************Getting temperature for " + city);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        double temperature = Math.random() * 100;
+        return temperature;
+    }
+
     @CacheResult(cacheName = "temperature-cache")
     public double getTemperature(@CacheKey String city) {
         //Imagine this method calls a weather API to get the temperature

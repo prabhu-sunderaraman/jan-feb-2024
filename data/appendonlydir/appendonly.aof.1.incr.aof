@@ -68,3 +68,17 @@ $30
 cache:temperature-cache:London
 $17
 47.87870979613977
+*3
+$3
+set
+$68
+cache:temperature-country-cache:{"keyElements":["London","England"]}
+$17
+69.30643867937076
+*3
+$3
+set
+$67
+cache:temperature-country-cache:{"keyElements":["Chennai","India"]}
+$18
+29.208946713731297
