@@ -12,4 +12,4 @@ services:
         image: redislabs/redisinsight:latest
         container_name: redis-gui
         ports:
-         - 8002:8002
+         - 8002:8001
