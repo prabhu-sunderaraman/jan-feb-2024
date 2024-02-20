@@ -4,16 +4,30 @@ import io.smallrye.common.annotation.Blocking;
 import io.smallrye.common.annotation.NonBlocking;
 import io.smallrye.mutiny.Multi;
 import io.smallrye.mutiny.Uni;
+import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
+import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import java.time.Duration;
 import java.util.List;
 
 @Path("/sample")
 public class SampleResource {
+
+    @Inject
+    @RestClient
+    HelloNodeJsApi helloNodeJsApi;
+
+    @GET
+    @Path("/{name}")
+    public String getResponseFromNodeJsApi(String name) {
+        //HttpClient and invoke the nodejs api
+        return helloNodeJsApi.greetings(name) + ", " + helloNodeJsApi.bye(name);
+    }
+
 
     @GET
     @Path("/stockpricesreactive")
