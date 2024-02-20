@@ -393,6 +393,45 @@ subscription {
 * You can pass combine queries; reuse snippets using fragments; use @include directives; pass variables into queries
 
 
+### Reactive
+
+* Quarkus Rest APIs execute requests in two types of threads. Executor thread and Event Loop thread
+* **Event loop thread** is a thread that is used to service multiple requests. It receives the request, hands over the request to a backend thread and starts servicing other requests
+* You cannot have a long running task like thread sleep or wait indefinitely here
+* You can indicate to Quarkus runtime that you want to use Event loop thread in two ways
+* **@NonBlocking** or return **Multi or Uni** types
+
+<br/>
+
+* But by-default all the requests are serviced by executor threads; Meaning 1 thread per request; a costly operation
+* So if you are very sure that your request is going to take extremely less time, you can switch to Event loop thread by marking the method as @NonBlocking
+* But if you have a long running task that involves calling an external service or a DB operation or computational logic it's better to keep it as it is
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

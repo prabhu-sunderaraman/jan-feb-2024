@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-api
+  namespace: mexico # This is the namespace where the deployment will be created
+  labels:
+    app: simple-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-api
+  template:
+    metadata:
+      labels:
+        app: simple-api
+    spec:
+      containers:
+        - name: simple-api
+          image: prabhudev/hl-samples-repo:simple-api-1.0.0
+          ports:
+            - containerPort: 8080
+          env:
+            - name: WELCOME
+              valueFrom:
+                configMapKeyRef:
+                  name: simple-api-config
+                  key: WELCOME
+            - name: BYE
+              valueFrom:
+                configMapKeyRef:
+                  name: simple-api-config
+                  key: BYE
+            - name: DATABASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: simple-api-config
+                  key: DATABASE_URL
+            - name: DATABASE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: simple-api-secret
+                  key: DATABASE_USERNAME
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: simple-api-secret
+                  key: DATABASE_PASSWORD
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-api
+  namespace: mexico # This is the namespace where the service will be created
+spec:
+  selector:
+    app: simple-api
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8080
