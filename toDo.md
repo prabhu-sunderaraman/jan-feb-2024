@@ -3,6 +3,10 @@
 * **Future** and **CompletableFuture** in java.util.concurrent package
 * Unit testing and mocking
 * Quarkus dev container mode
+* Logging
 * Validation library for request body
+
+
 * ksql with quarkus
-* AKS cluster
+
+* *AKS cluster*
