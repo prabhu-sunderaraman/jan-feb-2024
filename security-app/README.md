@@ -1,4 +1,4 @@
-# trial-app
+# security-app
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
@@ -49,11 +49,16 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 ./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
 ```
 
-You can then execute your native executable with: `./build/trial-app-1.0-SNAPSHOT-runner`
+You can then execute your native executable with: `./build/security-app-1.0-SNAPSHOT-runner`
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/gradle-tooling.
 
 ## Related Guides
 
-- Reactive MySQL client ([guide](https://quarkus.io/guides/reactive-sql-clients)): Connect to the MySQL database using
-  the reactive pattern
+- Elytron Security JDBC ([guide](https://quarkus.io/guides/security-jdbc)): Secure your applications with
+  username/password stored in a database
+- Elytron Security Properties File ([guide](https://quarkus.io/guides/security-properties)): Secure your applications
+  using properties files
+- SmallRye JWT ([guide](https://quarkus.io/guides/security-jwt)): Secure your applications with JSON Web Token
+- SmallRye JWT Build ([guide](https://quarkus.io/guides/security-jwt-build)): Create JSON Web Token with SmallRye JWT
+  Build API
